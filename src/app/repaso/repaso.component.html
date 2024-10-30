@@ -1,0 +1,94 @@
+<h1>Solo un h1</h1>
+
+<h2>Primer h2</h2>
+<h2>Segundo h2</h2>
+<h2>Tercero h2</h2>
+
+<h3>Primer h3</h3>
+<h3>Segundo h3</h3>
+<h3>Tercero h3</h3>
+
+<div>
+  Esto es un contenedor
+</div>
+
+<br>
+
+<header>
+  Aquí el logo
+  <br>
+  Menú (Tendremos el bocadilla - lista del menú)
+</header>
+
+<footer>
+  Aquí el contenido legal, información de la app que no es relevante
+  <br>
+  elemento: copyright y quién diseñó la app o versión de la App
+</footer>
+
+<br>
+
+<p>
+  <span style="font-weight: bold">Lorem ipsum</span> dolor sit amet, consectetur <i>adipisicing</i> elit. <sup>Amet</sup> ducimus earum eligendi error laboriosam nesciunt quis quisquam temporibus ullam.
+  <b>Animi</b> aperiam culpa dolor <strong>exercitationem </strong>fugit hic ipsam <sub>ipsum</sub> nam, ullam!
+</p>
+
+<span>
+  Etiqueta o tag para darle estilo concreto a alog específico dentro de un elemento
+</span>
+
+<main>
+  <section>Imagen principal</section>
+  <section>Carrusel de imágenes</section>
+  <section>Formulario de contacto</section>
+  <section>Formulario de login</section>
+</main>
+
+<br>
+
+<form method="post" action="" enctype="">
+  method - método, lo que hace
+  action - donde van los datos tras enviar el form
+  enctype - contenido adjunto (multipart/form-data)
+  post - mandar datos de forma encriptada
+  get - mandar datos en url de forma no encriptada
+
+  <br>
+
+  <div>
+    <label for="username">Usuario</label>
+    <input type="text" id="username" name="usuario" placeholder="Introduza su usuario" value="Sihao" autocomplete="on" required>
+    name - referencia a los datos que el usuario introduce
+  </div>
+  <div>
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" placeholder="********" autocomplete="on" required>
+  </div>
+
+  <div>
+    <label for="rol">Rol</label>
+    <select id="rol" name="rol" required>
+      <option value="estudiante" selected>Estudiante</option>
+      <option value="profesor">Profesor</option>
+    </select>
+  </div>
+  <div>
+    Selecciona el curso:
+    <input type="radio" id="primerCurso" name="cursos"><label for="primerCurso">Primer curso</label>
+    <input type="radio" id="segundoCurso" name="cursos" checked><label for="segundoCurso">Segundo curso</label>
+  </div>
+  <div>
+    Asignaturas:
+    <input type="checkbox" id="datos" name="asignaturas" checked required><label for="datos">Acceso a datos</label>
+    <input type="checkbox" id="interfaces" name="asignaturas"><label for="interfaces">Desarrollo de interfaces</label>
+  </div>
+  <div>
+    <label for="mensaje">Mensaje</label>
+    <textarea placeholder="Mensaje" id="mensaje" style="resize: none;" required></textarea>
+  </div>
+  <div>
+    <button type="submit">Enviar</button>
+  </div>
+</form>
+
+
