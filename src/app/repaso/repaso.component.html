@@ -1,12 +1,17 @@
-<h1>Solo un h1</h1>
+<h1>Solo un h1 {{nombre}}</h1>
 
-<h2>Primer h2</h2>
+<h2>Primer h2 {{edad}} años</h2>
 <h2>Segundo h2</h2>
-<h2>Tercero h2</h2>
+<h2 class="{{(visible == true) ? 'visible' : 'noVisible'}}">Tercero h2</h2>
+
+<button type="button" (click)="desaparecer()">Desaparecer</button>
 
 <h3>Primer h3</h3>
 <h3>Segundo h3</h3>
-<h3>Tercero h3</h3>
+<h3 class="{{(cambioColor == true) ? 'blue': 'red'}}">Tercero h3</h3>
+
+<button type="button" (click)="toggleColor()">Cambiar</button>
+
 
 <div>
   Esto es un contenedor
@@ -19,6 +24,25 @@
   <br>
   Menú (Tendremos el bocadilla - lista del menú)
 </header>
+
+<br>
+
+<div *ngIf="elementos.length > 0">
+  <p *ngFor="let elemento of elementos">
+    {{elemento}}
+  </p>
+</div>
+
+<br>
+
+<div *ngIf="elementos2.length > 0">
+  <p *ngFor="let elemento of elementos2; let i = index">
+    <span style="margin-right:10px;">{{elemento.id}}</span>
+    <span>{{elemento.nombre}}</span>
+    <span style="margin-left:10px;">{{i}}</span>
+  </p>
+
+</div>
 
 <footer>
   Aquí el contenido legal, información de la app que no es relevante
