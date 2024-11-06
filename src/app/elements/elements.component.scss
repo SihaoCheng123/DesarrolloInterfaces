@@ -1,0 +1,26 @@
+div{
+
+  width: 90%;
+  display: grid;
+  grid-template-rows: repeat (2 1fr);
+  grid-template-columns: repeat (2 1fr);
+  grid-gap: 0;
+
+  .cadaPokemon{
+
+    width: 150px;
+    height: 200px;
+    grid-row: 1/1;
+
+    h3{
+      color: red;
+    }
+
+    img{
+      width: 120px;
+      height: 120px;
+    }
+
+  }
+
+}

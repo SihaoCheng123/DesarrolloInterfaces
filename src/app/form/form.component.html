@@ -1,8 +1,24 @@
-<form action="" enctype="">
-  <label for="usuario">Usuario</label>
-  <input type="text" id="usuario" name="usuario" required>
-  <label for="contra">Contraseña</label>
-  <input type="text" id="contra" name="contra" required>
-  <button type="button">Iniciar</button>
+<form method="post" [formGroup]="formulario" (ngSubmit)="enviar()">
+  <div>
+    <label for="name-pokemon">Nombre</label>
+    <input formControlName="name" type="text" id="name-pokemon" placeholder="Pokemon" required>
+  </div>
+
+  <div>
+    <label for="category">Tipo: </label>
+    <select formControlName="category" id="category">
+      <option value="" selected>Selecciona una opción</option>
+      <option value="fire">Fuego</option>
+      <option value="water">Agua</option>
+      <option value="earth">Tierra</option>
+
+    </select>
+
+  </div>
+
+  <div class="button-form">
+    <button type="submit" [disabled]="formulario.invalid">Buscar</button>
+  </div>
+
 </form>
 

@@ -8,6 +8,8 @@ import { FormComponent } from './form/form.component';
 import {HomeComponent} from './home/home.component';
 import { ElementsComponent } from './elements/elements.component';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { ElementsComponent } from './elements/elements.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
