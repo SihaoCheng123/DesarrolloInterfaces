@@ -1,0 +1,8 @@
+<section class="padre"> <!--  Elemento de fondo negro, position fixed-->
+  <div class="contenido">  <!--    elemento con contenido y width 90% y blanco. La altura auto-->
+    <button type="button" class="close" (click)="toggleModal()">X</button>
+    <h2>{{pokemon?.name}}</h2>
+    <img src="{{pokemon?.image_url}}" alt="">
+    <p>{{pokemon?.description}}</p>
+  </div>
+</section>
