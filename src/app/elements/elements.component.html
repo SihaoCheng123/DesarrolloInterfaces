@@ -8,3 +8,12 @@
 </div>
 
 <app-modal *ngIf="mostrarModal"></app-modal>
+
+<div *ngIf="pokemonsApi.length > 0">
+  <div class="cadaPokemon" *ngFor="let pokemon of pokemonsApi">
+    <h3>{{pokemon.name}}</h3>
+    <button type="button" (click)="detallesPokemon(pokemon.name)">Ver información</button>
+  </div>
+</div>
+
+

@@ -4,3 +4,8 @@ export interface Pokemon {
   description: string;
   image_url: string;
 }
+
+export interface PokemonApi {
+  name: string;
+  url: string;
+}
