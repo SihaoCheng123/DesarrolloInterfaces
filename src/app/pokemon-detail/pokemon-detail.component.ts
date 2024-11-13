@@ -11,7 +11,7 @@ import {PokemonDetail} from '../services/interfaces/pokemon';
 export class PokemonDetailComponent {
 
   nombrePokemon: string|null = ""
-  pokemon: PokemonDetail = {name: this.nombrePokemon,abilities: "", base_experience:0, height: 0};
+  pokemon: PokemonDetail = {name: this.nombrePokemon, abilities: "", base_experience:0, height: 0};
   constructor(
     private pokemonDetailService: PokemonDetailService,
     private cadaPokemonService: CadaPokemonService
@@ -21,20 +21,21 @@ export class PokemonDetailComponent {
     this.pokemonDetailService.detail$.subscribe(detail =>{
       this.nombrePokemon = detail;
       })
-    this.cadaPokemonService.getPokemon(this.nombrePokemon).subscribe({
-      error: error =>{
-        console.log(error);
-      },
-      complete: ()=>{
-        console.log("Comunicación finalizada");
-      },
-      //algo que se va a ejecutar esté bien o mal
-      next: data =>{
-        this.pokemon.abilities = data.abilities.ability,
-        this.pokemon.base_experience = data.abilities.base_experience,
-          this.pokemon.height = data.abilities.height
-      }
 
-    })
+      this.cadaPokemonService.getPokemon().subscribe({
+        next: data => {
+
+          this.pokemon.abilities = data.abilities;
+          this.pokemon.base_experience = data.base_experience,
+          this.pokemon.height  = data.height
+          //         console.log(this.pokemonApiService)
+          },
+               
+          error: error =>{
+          console.log(error);
+          },
+      })
     }
+
+
 }

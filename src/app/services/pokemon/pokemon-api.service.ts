@@ -15,7 +15,6 @@ export class PokemonApiService {
 
   getAllPokemon(): Observable<any>{
     return this.http.get(this.url);
-
   }
 
 }

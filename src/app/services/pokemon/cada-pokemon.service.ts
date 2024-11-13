@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {PokemonDetailService} from './pokemon-detail.service';
+import { PokemonDetailComponent } from '../../pokemon-detail/pokemon-detail.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,15 +14,11 @@ export class CadaPokemonService {
 
   constructor(
     private http: HttpClient,
-    private pokemonDetailService: PokemonDetailService
+    private pokemonDetailComponent: PokemonDetailComponent
   ) { }
-  ngOnInit(){
-    this.pokemonDetailService.detail$.subscribe(detail =>{
-      this.nombrePokemon = detail;
-    })
-  }
-  getPokemon(nombrePokemon: string|null): Observable<any>{
-    return this.http.get(this.url + nombrePokemon);
+ 
+  getPokemon(): Observable<any>{
+    return this.http.get(this.url + this.pokemonDetailComponent.nombrePokemon);
   }
 
 }
