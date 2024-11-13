@@ -14,4 +14,6 @@ export class InformacionService {
   toggleModal(mostrar: boolean){
     this.mostrarModal.next(mostrar)
   }
+
+
 }

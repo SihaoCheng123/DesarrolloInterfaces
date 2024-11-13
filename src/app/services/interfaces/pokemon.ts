@@ -9,3 +9,10 @@ export interface PokemonApi {
   name: string;
   url: string;
 }
+
+export interface PokemonDetail{
+  name: string|null
+  abilities: string;
+  base_experience: number;
+  height: number;
+}

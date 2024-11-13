@@ -3,6 +3,7 @@ import {Pokemon, PokemonApi} from '../services/interfaces/pokemon';
 import {InformacionService} from '../services/modales/informacion.service';
 import {EnviarPokemonService} from '../services/pokemon/enviar-pokemon.service';
 import {PokemonApiService} from '../services/pokemon/pokemon-api.service';
+import {PokemonDetailService} from '../services/pokemon/pokemon-detail.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -20,7 +21,8 @@ export class ElementsComponent implements OnInit{
     private informacionService: InformacionService,
     private enviarPokemonService: EnviarPokemonService,
     private pokemonApiService: PokemonApiService,
-    private router: Router
+    private router: Router,
+    private pokemonDetailService: PokemonDetailService
     ){}
 
   ngOnInit(){
@@ -47,7 +49,6 @@ export class ElementsComponent implements OnInit{
     })
   }
 
-
   toggleModal(pk: Pokemon){
     this.enviarPokemonService.updatePokemon(pk);
     this.informacionService.toggleModal(true);
@@ -61,6 +62,7 @@ export class ElementsComponent implements OnInit{
   ]
 
   detallesPokemon(nombre: string){
+    this.pokemonDetailService.showDetail(nombre);
     this.router.navigate(['detalles']);
 
   }
