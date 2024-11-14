@@ -1,15 +1,17 @@
-<h1>{{nombrePokemon}}</h1>
-<p>
-  Nombre :{{pokemon.name}}
-</p>
-<p>
-  Habilidades: {{pokemon.abilities}}
-</p>
-<p>
-  Altura: {{pokemon.height}}
-</p>
-<p>
-  Experiencia base:{{pokemon.base_experience}}
-</p>
+<div class="padre">
+  <h1>{{nombrePokemon}}</h1>
+  <div class="habilidades">
+    <h2>Habilidades:</h2>
+    <p *ngFor="let ability of pokemon.abilities">{{ability}}</p>
+  </div>
+
+  <h2>
+    Altura: {{pokemon.height}}
+  </h2>
+  <h2>
+    Experiencia base:{{pokemon.base_experience}}
+  </h2>
+</div>
+
 
 

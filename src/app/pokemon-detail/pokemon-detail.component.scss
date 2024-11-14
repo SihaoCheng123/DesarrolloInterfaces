@@ -1,0 +1,25 @@
+.padre{
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #262626;
+  padding: 10px 15px;
+  width: 200px;
+  position: relative;
+  text-align: center;
+
+  h1{
+    color:red;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+    .habilidades{
+      width: 80%;
+      height: 80%;
+    }
+}
