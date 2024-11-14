@@ -11,7 +11,7 @@ import {PokemonDetail} from '../services/interfaces/pokemon';
 export class PokemonDetailComponent implements OnInit {
 
   nombrePokemon: string | null = ""
-  pokemon: PokemonDetail = {name: this.nombrePokemon, abilities: [], base_experience: 0, height: 0};
+  pokemon: PokemonDetail = {name: this.nombrePokemon, img:"", abilities: [], base_experience: 0, height: 0};
 
   constructor(
     private pokemonDetailService: PokemonDetailService,
@@ -31,10 +31,10 @@ export class PokemonDetailComponent implements OnInit {
           for (let i = 0; i < data.abilities.length; i++) {
             this.pokemon.abilities.push(data.abilities[i].ability.name)
           }
-
+          this.pokemon.img = data.sprites.front_default;
           this.pokemon.base_experience = data.base_experience;
-            this.pokemon.height = data.height
-
+          this.pokemon.height = data.height
+          console.log(data)
         },
 
         error: error => {

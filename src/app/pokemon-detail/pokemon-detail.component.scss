@@ -1,18 +1,22 @@
 .padre{
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 50%;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
   box-shadow: 0 2px 3px #262626;
-  padding: 10px 15px;
-  width: 200px;
   position: relative;
-  text-align: center;
+  padding: 20px 20px;
+  margin-top: 20%;
 
   h1{
-    color:red;
+    color: red;
+    font-size: 30px;
+  }
+
+  img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
   }
 
   h2{

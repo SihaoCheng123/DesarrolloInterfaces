@@ -1,16 +1,15 @@
 <div class="padre">
   <h1>{{nombrePokemon}}</h1>
+  <img src="{{pokemon.img}}" alt="{{nombrePokemon}}">
   <div class="habilidades">
     <h2>Habilidades:</h2>
     <p *ngFor="let ability of pokemon.abilities">{{ability}}</p>
   </div>
 
-  <h2>
-    Altura: {{pokemon.height}}
-  </h2>
-  <h2>
-    Experiencia base:{{pokemon.base_experience}}
-  </h2>
+  <h2>Altura:</h2>
+  <p>{{pokemon.height}}</p>
+  <h2>Experiencia base:</h2>
+  <p>{{pokemon.base_experience}}</p>
 </div>
 
 

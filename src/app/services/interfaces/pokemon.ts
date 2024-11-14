@@ -15,7 +15,8 @@ export interface Abilities{
 }
 
 export interface PokemonDetail{
-  name: string|null
+  name: string|null;
+  img: string;
   abilities: string[];
   base_experience: number;
   height: number;
